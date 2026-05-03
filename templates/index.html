@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Python Site</h1>
+    <form method="post">
+        <label for="message">Как ты себя чувствуешь?</label><br>
+        <textarea name="message" id="message" rows="4" cols="50" placeholder="Например: все хорошо">
+            {{user_text}}
+        </textarea><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    {% if recommendation %}
+    <div>
+        <h3>Рекомендация</h3>
+        <p>{{ recommendation }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
