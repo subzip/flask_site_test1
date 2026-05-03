@@ -36,6 +36,7 @@ def generate_recommendation(mood):
     return text[len(prompt):].strip()
 
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
 
